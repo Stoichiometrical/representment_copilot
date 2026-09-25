@@ -34,17 +34,6 @@ For example:
 The LLM is used only when the current evidence does NOT satisfy
 the rule, to determine whether the missing evidence is realistically
 requestable from the merchant.
-
-Example:
-
-    Missing original subscription opt-in record
-        -> potentially recoverable
-        -> ask merchant for consent/signup record
-
-    Transaction metadata says 3DS = "not_attempted"
-        -> not recoverable
-        -> merchant cannot retroactively perform 3DS
-
 This keeps business-rule execution deterministic while still using
 AI where interpretation is useful.
 """

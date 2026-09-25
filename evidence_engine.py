@@ -21,40 +21,6 @@ It intentionally DOES NOT decide the final action:
 That should be handled by a separate decision engine after evidence
 assessment has completed.
 
-Architecture
-------------
-CASE JSON
-    |
-    +--> reason_codes.json --> applicable evidence requirements
-    |
-    +--> merchant evidence documents
-            |
-            +--> PDF
-            |     |
-            |     +--> native text extraction
-            |     +--> vision fallback/supplement where needed
-            |
-            +--> PNG/JPG/WebP
-                  |
-                  +--> vision extraction
-            |
-            v
-      persistent pages
-            |
-            v
-          chunks
-            |
-            v
-    requirement-specific retrieval
-            |
-            v
-    LLM requirement assessment
-            |
-            +--> satisfied
-            +--> partial
-            +--> missing
-            +--> not_applicable
-
 
 Persistence
 -----------

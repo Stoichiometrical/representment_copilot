@@ -44,7 +44,7 @@ This component only turns those structured outputs into a concise,
 analyst-friendly workup.
 """
 
-from __future__ import annotations
+
 
 import argparse
 import hashlib
