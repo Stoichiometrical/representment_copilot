@@ -42,6 +42,11 @@ Stop both services with `app stop` on Windows or `./app stop` on Linux. `status`
 - 
 ![Architecture Diagram](architecture.png)
 
+
+## Interface
+
+![Screenshot of UI](screenshot.png)
+
 ## Link to Video Demo 
 -[https://drive.google.com/drive/folders/1vfy9kADyBmLgAmabZTB-ZCJUXH6DGPHI?usp=sharing](https://drive.google.com/drive/folders/1vfy9kADyBmLgAmabZTB-ZCJUXH6DGPHI?usp=sharing)
 
