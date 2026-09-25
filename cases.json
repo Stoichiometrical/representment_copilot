@@ -1,0 +1,341 @@
+[
+  {
+    "case_id": "CB-2025-0001",
+    "scheme": "visa",
+    "reason_code": "13.1",
+    "reason_code_label": "Merchandise / Services Not Received",
+    "chargeback_date": "2025-04-18",
+    "chargeback_amount": {
+      "value": 189.99,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_8821AB",
+      "merchant_name": "NorthernThread Apparel",
+      "merchant_mcc": "5651",
+      "transaction_date": "2025-03-22T14:31:08Z",
+      "amount": {
+        "value": 189.99,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "authenticated",
+      "ip_address": "82.39.114.22",
+      "device_fingerprint": "fp_b7d2e9c4a1",
+      "billing_address_postcode": "SW4 7QR",
+      "shipping_address_postcode": "SW4 7QR"
+    },
+    "issuer_narrative": "Cardholder states they ordered clothing on 22 March 2025 and the package never arrived. Cardholder has contacted the merchant twice with no resolution and now requests chargeback under reason code 13.1.",
+    "merchant_evidence_documents": [
+      "CB-2025-0001_delivery_confirmation.pdf",
+      "CB-2025-0001_carrier_tracking.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0002",
+    "scheme": "visa",
+    "reason_code": "13.1",
+    "reason_code_label": "Merchandise / Services Not Received",
+    "chargeback_date": "2025-05-02",
+    "chargeback_amount": {
+      "value": 642.0,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_9931CD",
+      "merchant_name": "LumaTech Electronics",
+      "merchant_mcc": "5732",
+      "transaction_date": "2025-04-09T19:14:51Z",
+      "amount": {
+        "value": 642.0,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "N",
+      "cvv_result": "M",
+      "three_ds_status": "attempted",
+      "ip_address": "188.29.44.179",
+      "device_fingerprint": "fp_c01e84f2b9",
+      "billing_address_postcode": "M14 5RT",
+      "shipping_address_postcode": "M1 7DR"
+    },
+    "issuer_narrative": "Cardholder denies receipt of goods. Cardholder states the address listed in the order is not their address and they did not authorise delivery to that address.",
+    "merchant_evidence_documents": [
+      "CB-2025-0002_tracking_screenshot.png",
+      "CB-2025-0002_order_confirmation.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0003",
+    "scheme": "mastercard",
+    "reason_code": "4837",
+    "reason_code_label": "No Cardholder Authorisation",
+    "chargeback_date": "2025-04-25",
+    "chargeback_amount": {
+      "value": 1240.5,
+      "currency": "EUR"
+    },
+    "transaction": {
+      "transaction_id": "txn_4412EF",
+      "merchant_name": "Velo Continental Rentals",
+      "merchant_mcc": "7512",
+      "transaction_date": "2025-04-01T11:08:22Z",
+      "amount": {
+        "value": 1240.5,
+        "currency": "EUR"
+      },
+      "card_bin_country": "FR",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "authenticated",
+      "ip_address": "90.84.21.117",
+      "device_fingerprint": "fp_dd91a4c7e2",
+      "billing_address_postcode": "75011",
+      "shipping_address_postcode": "75011"
+    },
+    "issuer_narrative": "Cardholder claims they did not authorise this transaction. Cardholder states their card details may have been compromised.",
+    "merchant_evidence_documents": [
+      "CB-2025-0003_avs_cvv_log.pdf",
+      "CB-2025-0003_3ds_authentication.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0004",
+    "scheme": "mastercard",
+    "reason_code": "4837",
+    "reason_code_label": "No Cardholder Authorisation",
+    "chargeback_date": "2025-05-11",
+    "chargeback_amount": {
+      "value": 87.4,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_7762GH",
+      "merchant_name": "QuickStream Digital",
+      "merchant_mcc": "5815",
+      "transaction_date": "2025-04-29T03:42:11Z",
+      "amount": {
+        "value": 87.4,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "N",
+      "cvv_result": "N",
+      "three_ds_status": "not_attempted",
+      "ip_address": "45.227.255.103",
+      "device_fingerprint": "fp_new_unseen",
+      "billing_address_postcode": "E14 5AB",
+      "shipping_address_postcode": null
+    },
+    "issuer_narrative": "Cardholder denies the transaction. Card was in cardholder's possession at the time of the transaction. Cardholder has no relationship with this merchant.",
+    "merchant_evidence_documents": [
+      "CB-2025-0004_internal_fraud_report.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0005",
+    "scheme": "visa",
+    "reason_code": "12.6.1",
+    "reason_code_label": "Duplicate Processing",
+    "chargeback_date": "2025-04-30",
+    "chargeback_amount": {
+      "value": 54.0,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_5523IJ",
+      "merchant_name": "Roastline Coffee Co",
+      "merchant_mcc": "5814",
+      "transaction_date": "2025-04-12T08:11:33Z",
+      "amount": {
+        "value": 54.0,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "frictionless",
+      "ip_address": "82.39.114.22",
+      "device_fingerprint": "fp_b7d2e9c4a1",
+      "billing_address_postcode": "N1 4PD",
+      "shipping_address_postcode": "N1 4PD"
+    },
+    "issuer_narrative": "Cardholder states they were charged twice on 12 April 2025 by Roastline Coffee Co for the same amount. Cardholder claims only one purchase was made.",
+    "merchant_evidence_documents": [
+      "CB-2025-0005_invoice_order_A.pdf",
+      "CB-2025-0005_invoice_order_B.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0006",
+    "scheme": "visa",
+    "reason_code": "13.3",
+    "reason_code_label": "Not as Described or Defective Merchandise",
+    "chargeback_date": "2025-05-08",
+    "chargeback_amount": {
+      "value": 329.0,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_6634KL",
+      "merchant_name": "HavenHome Furnishings",
+      "merchant_mcc": "5712",
+      "transaction_date": "2025-04-15T16:22:48Z",
+      "amount": {
+        "value": 329.0,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "authenticated",
+      "ip_address": "86.151.22.99",
+      "device_fingerprint": "fp_e12a99b3f0",
+      "billing_address_postcode": "BS8 1TR",
+      "shipping_address_postcode": "BS8 1TR"
+    },
+    "issuer_narrative": "Cardholder states the armchair they received has a structural fault \u2014 the frame wobbles and one leg is not properly seated. Cardholder states the product is not fit for purpose and the merchant has not responded to their refund request.",
+    "merchant_evidence_documents": [
+      "CB-2025-0006_product_listing.pdf",
+      "CB-2025-0006_delivery_photo.png",
+      "CB-2025-0006_returns_policy.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0007",
+    "scheme": "mastercard",
+    "reason_code": "4855",
+    "reason_code_label": "Goods / Services Not Provided",
+    "chargeback_date": "2025-05-14",
+    "chargeback_amount": {
+      "value": 412.75,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_7745MN",
+      "merchant_name": "TerraFreight Logistics",
+      "merchant_mcc": "4214",
+      "transaction_date": "2025-04-22T10:55:19Z",
+      "amount": {
+        "value": 412.75,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "authenticated",
+      "ip_address": "82.39.55.144",
+      "device_fingerprint": "fp_aa12bb45cc",
+      "billing_address_postcode": "LS1 4DT",
+      "shipping_address_postcode": "LS9 8AA"
+    },
+    "issuer_narrative": "Cardholder paid for a freight shipment to be collected and delivered. Cardholder states the shipment was never collected and they have received no service.",
+    "merchant_evidence_documents": [
+      "CB-2025-0007_consolidated_manifest.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0008",
+    "scheme": "visa",
+    "reason_code": "13.2",
+    "reason_code_label": "Cancelled Recurring Transaction",
+    "chargeback_date": "2025-05-05",
+    "chargeback_amount": {
+      "value": 29.99,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_8856OP",
+      "merchant_name": "FluxFit Online",
+      "merchant_mcc": "7997",
+      "transaction_date": "2025-04-20T00:00:01Z",
+      "amount": {
+        "value": 29.99,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "frictionless",
+      "ip_address": null,
+      "device_fingerprint": null,
+      "billing_address_postcode": "EH3 9QG",
+      "shipping_address_postcode": null
+    },
+    "issuer_narrative": "Cardholder states they cancelled their FluxFit subscription on 18 March 2025 but were charged again on 20 April 2025. Cardholder requests refund and reversal under reason code 13.2.",
+    "merchant_evidence_documents": [
+      "CB-2025-0008_subscription_terms.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0009",
+    "scheme": "mastercard",
+    "reason_code": "4859",
+    "reason_code_label": "No-Show / Addendum",
+    "chargeback_date": "2025-05-12",
+    "chargeback_amount": {
+      "value": 215.0,
+      "currency": "EUR"
+    },
+    "transaction": {
+      "transaction_id": "txn_9967QR",
+      "merchant_name": "Hotel Marais Saint-Paul",
+      "merchant_mcc": "7011",
+      "transaction_date": "2025-04-26T11:00:00Z",
+      "amount": {
+        "value": 215.0,
+        "currency": "EUR"
+      },
+      "card_bin_country": "DE",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "authenticated",
+      "ip_address": "84.142.18.211",
+      "device_fingerprint": "fp_de4421ab87",
+      "billing_address_postcode": "10115",
+      "shipping_address_postcode": null
+    },
+    "issuer_narrative": "Cardholder was charged 215 EUR as a no-show fee. Cardholder disputes that the charge is valid.",
+    "merchant_evidence_documents": [
+      "CB-2025-0009_booking_confirmation.pdf",
+      "CB-2025-0009_cancellation_policy.pdf",
+      "CB-2025-0009_front_desk_log.pdf"
+    ]
+  },
+  {
+    "case_id": "CB-2025-0010",
+    "scheme": "visa",
+    "reason_code": "10.5",
+    "reason_code_label": "Visa Fraud Monitoring Program",
+    "chargeback_date": "2025-05-15",
+    "chargeback_amount": {
+      "value": 78.5,
+      "currency": "GBP"
+    },
+    "transaction": {
+      "transaction_id": "txn_1178ST",
+      "merchant_name": "Brightline Beauty",
+      "merchant_mcc": "5977",
+      "transaction_date": "2025-04-30T22:14:55Z",
+      "amount": {
+        "value": 78.5,
+        "currency": "GBP"
+      },
+      "card_bin_country": "GB",
+      "avs_result": "Y",
+      "cvv_result": "M",
+      "three_ds_status": "authenticated",
+      "ip_address": "82.39.114.22",
+      "device_fingerprint": "fp_b7d2e9c4a1",
+      "billing_address_postcode": "SW4 7QR",
+      "shipping_address_postcode": "SW4 7QR"
+    },
+    "issuer_narrative": "Transaction flagged under Visa Fraud Monitoring Program. Issuer is processing under reason code 10.5.",
+    "merchant_evidence_documents": [
+      "CB-2025-0010_3ds_authentication.pdf",
+      "CB-2025-0010_delivery_confirmation.pdf"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+.env
+.venv/
+frontend/node_modules/
+frontend/dist/
+.runtime/
+data/*.db
+data/results/
+data/decisions/
+data/workups/
+__pycache__/
+*.pyc

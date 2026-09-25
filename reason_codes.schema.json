@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/reason_codes.schema.json",
+  "title": "Simplified Chargeback Reason Codes",
+  "description": "Schema for reason codes distilled from the supplied simplified compelling-evidence PDF.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "#/$defs/reason-code"
+  },
+  "$defs": {
+    "reason-code": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "name",
+        "scheme",
+        "issuer-claim",
+        "compelling-evidence",
+        "satisfaction-criteria"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[0-9]+(?:\\.[0-9]+)*$",
+          "description": "The scheme reason code, such as 10.4, 12.6.1, or 4837."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The plain-language name of the reason code."
+        },
+        "scheme": {
+          "type": "string",
+          "enum": ["visa", "mastercard", "other"],
+          "description": "The payment scheme. The supplied PDF contains Visa and Mastercard only; other is reserved for future records."
+        },
+        "issuer-claim": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A concise statement of what the issuer alleges."
+        },
+        "compelling-evidence": {
+          "type": "array",
+          "description": "The evidence routes or requirements described by the simplified scheme rule.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "satisfaction-criteria": {
+          "$ref": "#/$defs/satisfaction-criteria"
+        }
+      }
+    },
+    "satisfaction-criteria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "logic",
+        "minimum-required",
+        "total-options",
+        "description"
+      ],
+      "properties": {
+        "logic": {
+          "type": "string",
+          "enum": ["all", "any", "exception-only", "not-representable"],
+          "description": "How the evidence list must be evaluated."
+        },
+        "minimum-required": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The minimum number of valid evidence entries required."
+        },
+        "total-options": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The number of entries in compelling-evidence."
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable explanation of the threshold and any internal OR or conditional rule."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"logic": {"const": "not-representable"}},
+            "required": ["logic"]
+          },
+          "then": {
+            "properties": {
+              "minimum-required": {"const": 0},
+              "total-options": {"const": 0}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"logic": {"enum": ["any", "exception-only"]}},
+            "required": ["logic"]
+          },
+          "then": {
+            "properties": {
+              "minimum-required": {"minimum": 1},
+              "total-options": {"minimum": 1}
+            }
+          }
+        }
+      ]
+    }
+  }
+}

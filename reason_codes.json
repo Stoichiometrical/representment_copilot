@@ -1,0 +1,256 @@
+[
+  {
+    "code": "10.4",
+    "name": "Other Fraud, Card Absent Environment",
+    "scheme": "visa",
+    "issuer-claim": "The cardholder denies authorising a card-not-present transaction.",
+    "compelling-evidence": [
+      "Evidence that the cardholder used the same card and the same shipping address in two prior undisputed transactions with this merchant, completed more than 120 days but less than 365 days before the disputed transaction.",
+      "Evidence that the cardholder possesses and uses the merchandise, such as signed-in account activity after delivery or a social-media post tagging the merchant.",
+      "For digital goods, a device fingerprint, IP address, geolocation, and customer account login matching prior undisputed transactions.",
+      "Proof of delivery to the cardholder's verified billing address, rather than only the shipping address, with signature confirmation."
+    ],
+    "satisfaction-criteria": {
+      "logic": "any",
+      "minimum-required": 2,
+      "total-options": 4,
+      "description": "Any two of the four compelling-evidence options must be valid."
+    }
+  },
+  {
+    "code": "10.5",
+    "name": "Visa Fraud Monitoring Program",
+    "scheme": "visa",
+    "issuer-claim": "The transaction was flagged under Visa's fraud monitoring program.",
+    "compelling-evidence": [
+      "Proof that the issuer miscoded the transaction."
+    ],
+    "satisfaction-criteria": {
+      "logic": "exception-only",
+      "minimum-required": 1,
+      "total-options": 1,
+      "description": "Generally not representable. Accept liability unless the merchant proves that the issuer miscoded the transaction."
+    }
+  },
+  {
+    "code": "12.5",
+    "name": "Incorrect Amount",
+    "scheme": "visa",
+    "issuer-claim": "The amount charged does not match the amount the cardholder authorised.",
+    "compelling-evidence": [
+      "A signed receipt, terms of service, or order confirmation showing the amount the cardholder agreed to.",
+      "Documentation showing that the amount charged matches the agreed amount.",
+      "If a tip, gratuity, or adjustment was added, evidence that the cardholder authorised it."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 3,
+      "total-options": 3,
+      "description": "All three requirements must be valid; the third requirement applies when a tip, gratuity, or adjustment was added."
+    }
+  },
+  {
+    "code": "12.6.1",
+    "name": "Duplicate Processing",
+    "scheme": "visa",
+    "issuer-claim": "The same transaction was processed more than once.",
+    "compelling-evidence": [
+      "Evidence that the two transactions relate to two separate purchases, such as different order IDs, items, or services.",
+      "Documentation of each purchase event, such as separate invoices, delivery confirmations, or service dates.",
+      "Transaction timestamps and authorisation codes for each charge."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 3,
+      "total-options": 3,
+      "description": "All three compelling-evidence requirements must be valid."
+    }
+  },
+  {
+    "code": "13.1",
+    "name": "Merchandise / Services Not Received",
+    "scheme": "visa",
+    "issuer-claim": "The cardholder paid but never received the goods or services.",
+    "compelling-evidence": [
+      "For goods, proof of delivery containing the tracking number, carrier name, and confirmation of delivery to the cardholder's address.",
+      "For services, evidence that the service was rendered on or before the expected date, such as a booking confirmation, attendance log, or access log.",
+      "Evidence that the delivery or service date was on or before the chargeback date.",
+      "Evidence that the delivery address materially matches the address supplied by the cardholder at purchase."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 4,
+      "total-options": 4,
+      "description": "All applicable requirements must be valid. Use the goods-delivery requirement for goods and the service-rendered requirement for services, together with the timing and address requirements."
+    }
+  },
+  {
+    "code": "13.2",
+    "name": "Cancelled Recurring Transaction",
+    "scheme": "visa",
+    "issuer-claim": "The cardholder cancelled a recurring subscription but was still charged.",
+    "compelling-evidence": [
+      "Terms of service disclosing the recurring billing arrangement and cancellation method.",
+      "Evidence that the cardholder was notified of the upcoming charge, typically at least seven days in advance for transactions over the defined threshold.",
+      "Evidence that there is no record of a cancellation request before the billing date.",
+      "Evidence of the cardholder's original opt-in to the recurring arrangement."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 4,
+      "total-options": 4,
+      "description": "All four compelling-evidence requirements must be valid."
+    }
+  },
+  {
+    "code": "13.3",
+    "name": "Not as Described or Defective Merchandise",
+    "scheme": "visa",
+    "issuer-claim": "The cardholder received the goods, but they are materially not as described or are defective.",
+    "compelling-evidence": [
+      "The merchant's published description of the item purchased by the cardholder.",
+      "Evidence that the delivered item matches the published description, such as photographs, specifications, or a serial-number match.",
+      "Evidence that the merchant offered a return or refund route that the cardholder did not use, or evidence that the cardholder used and retained the merchandise after raising the complaint."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 3,
+      "total-options": 3,
+      "description": "All three requirements must be valid. Within the third requirement, either the unused return/refund route or retained use after complaint is sufficient."
+    }
+  },
+  {
+    "code": "13.6",
+    "name": "Credit Not Processed",
+    "scheme": "visa",
+    "issuer-claim": "The merchant agreed to a refund but never processed it.",
+    "compelling-evidence": [
+      "Evidence that a refund was processed, including the refund transaction ID, date, and amount.",
+      "Evidence that no refund was agreed, including the merchant's refund policy and the absence of a refund commitment in communications with the cardholder."
+    ],
+    "satisfaction-criteria": {
+      "logic": "any",
+      "minimum-required": 1,
+      "total-options": 2,
+      "description": "Either one of the two compelling-evidence routes must be valid."
+    }
+  },
+  {
+    "code": "13.7",
+    "name": "Cancelled Merchandise / Services",
+    "scheme": "visa",
+    "issuer-claim": "The cardholder cancelled the purchase under the merchant's policy but was still charged.",
+    "compelling-evidence": [
+      "The merchant's cancellation policy as displayed at the point of sale.",
+      "Evidence that the cardholder agreed to the cancellation policy, such as a checkbox record or signed terms.",
+      "Evidence that the cardholder did not cancel within the policy window or cancelled outside the refundable period."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 3,
+      "total-options": 3,
+      "description": "All three compelling-evidence requirements must be valid."
+    }
+  },
+  {
+    "code": "4837",
+    "name": "No Cardholder Authorisation",
+    "scheme": "mastercard",
+    "issuer-claim": "The cardholder denies authorising the card-not-present transaction.",
+    "compelling-evidence": [
+      "A full-address AVS match and a CVV match on the disputed transaction.",
+      "Successful 3-D Secure authentication through Mastercard SecureCode or Identity Check.",
+      "Two prior undisputed transactions from the same cardholder with this merchant in the previous 12 months, with matching billing details.",
+      "Proof of delivery to the cardholder's billing address with signature confirmation."
+    ],
+    "satisfaction-criteria": {
+      "logic": "any",
+      "minimum-required": 2,
+      "total-options": 4,
+      "description": "Any two of the four compelling-evidence options must be valid."
+    }
+  },
+  {
+    "code": "4853",
+    "name": "Cardholder Dispute (Goods / Services Not Provided)",
+    "scheme": "mastercard",
+    "issuer-claim": "The goods or services were not provided as agreed.",
+    "compelling-evidence": [
+      "Proof of delivery or service provision, such as tracking, a confirmation, or an access log.",
+      "Evidence that the goods or services materially match what was advertised.",
+      "Evidence that the cardholder did not contact the merchant to resolve the issue before the chargeback, or documentation showing that the merchant attempted resolution and the cardholder refused."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 3,
+      "total-options": 3,
+      "description": "All three requirements must be valid. Within the third requirement, either no prior cardholder contact or a refused merchant resolution attempt is sufficient."
+    }
+  },
+  {
+    "code": "4855",
+    "name": "Goods / Services Not Provided",
+    "scheme": "mastercard",
+    "issuer-claim": "The cardholder paid for goods or services that were never delivered or rendered.",
+    "compelling-evidence": [
+      "Proof of delivery with tracking and carrier confirmation, or proof of service through access logs, attendance records, or a completed booking.",
+      "Evidence that the delivery or service date was before the chargeback date.",
+      "Evidence that the delivery address matches the cardholder's records."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 3,
+      "total-options": 3,
+      "description": "All three compelling-evidence requirements must be valid."
+    }
+  },
+  {
+    "code": "4863",
+    "name": "Cardholder Does Not Recognise - Potential Fraud",
+    "scheme": "mastercard",
+    "issuer-claim": "The cardholder does not recognise the transaction; it may be fraud or an unfamiliar billing descriptor.",
+    "compelling-evidence": [
+      "Evidence that the merchant's billing descriptor matches a merchant name the cardholder would recognise.",
+      "An AVS match and CVV match on the disputed transaction.",
+      "Prior undisputed transactions from the same cardholder with this merchant.",
+      "A cardholder IP address, device, or account login matching prior undisputed sessions."
+    ],
+    "satisfaction-criteria": {
+      "logic": "any",
+      "minimum-required": 1,
+      "total-options": 4,
+      "description": "Any one of the four compelling-evidence options must be valid."
+    }
+  },
+  {
+    "code": "4859",
+    "name": "No-Show / Addendum",
+    "scheme": "mastercard",
+    "issuer-claim": "The cardholder disputes a no-show fee, late-cancellation fee, or addendum charge.",
+    "compelling-evidence": [
+      "Evidence of the cardholder's original reservation or booking.",
+      "The merchant's no-show or cancellation policy as disclosed at booking.",
+      "Evidence that the cardholder failed to show or cancelled outside the policy window.",
+      "Evidence that the fee charged matches the disclosed policy."
+    ],
+    "satisfaction-criteria": {
+      "logic": "all",
+      "minimum-required": 4,
+      "total-options": 4,
+      "description": "All four compelling-evidence requirements must be valid."
+    }
+  },
+  {
+    "code": "4870",
+    "name": "Chip Liability Shift",
+    "scheme": "mastercard",
+    "issuer-claim": "A counterfeit card was used at a non-chip-enabled card-present terminal.",
+    "compelling-evidence": [],
+    "satisfaction-criteria": {
+      "logic": "not-representable",
+      "minimum-required": 0,
+      "total-options": 0,
+      "description": "Not representable in this card-not-present workflow. Accept liability and flag the merchant for a terminal upgrade."
+    }
+  }
+]
