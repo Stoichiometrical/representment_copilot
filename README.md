@@ -39,6 +39,8 @@ Stop both services with `app stop` on Windows or `./app stop` on Linux. `status`
 - Review the rule, evidence status and gaps. Every citation opens the matching original document, page, extracted chunk and supporting excerpt in the source inspector.
 - Edit the rationale, override the action when necessary, record an analyst note, and save the decision.
 - **Add case** opens the raw intake table for transaction metadata, issuer narrative and evidence uploads.
+- 
+![Architecture Diagram](architecture.png)
 
 ## Link to Video Demo 
 -[https://drive.google.com/drive/folders/1vfy9kADyBmLgAmabZTB-ZCJUXH6DGPHI?usp=sharing](https://drive.google.com/drive/folders/1vfy9kADyBmLgAmabZTB-ZCJUXH6DGPHI?usp=sharing)
